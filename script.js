@@ -18,6 +18,38 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// =========================
+// SCROLL REVEAL
+// =========================
+(function () {
+  const targets = [
+    '.about',
+    '.experience-section',
+    '.work-section',
+    '.contact-section'
+  ];
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08
+  });
+
+  targets.forEach(sel => {
+    const el = document.querySelector(sel);
+    if (el) {
+      el.classList.add('scroll-reveal');
+      observer.observe(el);
+    }
+  });
+})();
+
 const companies = {
   plum: {
     src: 'plum.png',
@@ -62,29 +94,39 @@ function openBox(company) {
   }
 
   activeCompany = company;
-
 }
+
 function closeBox() {
   box.classList.remove('visible');
+
   heading.classList.remove('hidden');
-  hint.classList.remove('hidden');
+
+  if (hint) {
+    hint.classList.remove('hidden');
+  }
+
+  hotspots.forEach(h =>
+    h.classList.remove('active')
+  );
+
   activeCompany = null;
-  hotspots.forEach(h => h.classList.remove('active'));
 }
 
 hotspots.forEach(hotspot => {
-  hotspot.addEventListener('click', () => {
+  hotspot.addEventListener('click', (e) => {
+    e.stopPropagation();
+
     const company = hotspot.dataset.company;
-
-    hotspots.forEach(h =>
-      h.classList.remove('active')
-    );
-
-    hotspot.classList.add('active');
 
     if (activeCompany === company) {
       closeBox();
     } else {
+      hotspots.forEach(h =>
+        h.classList.remove('active')
+      );
+
+      hotspot.classList.add('active');
+
       openBox(company);
     }
   });
@@ -93,23 +135,43 @@ hotspots.forEach(hotspot => {
 /* LOGO BUTTONS */
 
 logoButtons.forEach(logo => {
-  logo.addEventListener('click', () => {
+  logo.addEventListener('click', (e) => {
+    e.stopPropagation();
+
     const company = logo.dataset.company;
+
+    hotspots.forEach(h =>
+      h.classList.remove('active')
+    );
+
+    const matchingHotspot = document.querySelector(
+      `.book-hotspot[data-company="${company}"]`
+    );
+
+    if (matchingHotspot) {
+      matchingHotspot.classList.add('active');
+    }
 
     openBox(company);
   });
 });
 
-closeBtn.addEventListener('click', closeBox);
+closeBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  closeBox();
+});
+
 document.addEventListener('click', (e) => {
   if (
     activeCompany &&
     !box.contains(e.target) &&
-    !e.target.closest('[data-company]')
+    !e.target.closest('.book-hotspot') &&
+    !e.target.closest('.exp-logos img')
   ) {
     closeBox();
   }
 });
+
 (function () {
   const cards = document.querySelectorAll('.work-card');
   const panel = document.getElementById('workPanel');
@@ -136,12 +198,12 @@ document.addEventListener('click', (e) => {
       panelLink.textContent = card.dataset.linktext;
       panelLink.href = card.dataset.link;
 
-    panelBrand.style.color = card.dataset.brand === 'Notion' ? '#a78bdb' : '#ff89aa';
+      panelBrand.style.color = card.dataset.brand === 'Notion' ? '#a78bdb' : '#ff89aa';
 
       panel.classList.add('open');
-setTimeout(() => {
-  panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
-}, 230);
+      setTimeout(() => {
+        panel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 230);
     });
   });
 
@@ -176,8 +238,8 @@ setTimeout(() => {
     wrapper.scrollLeft = scrollLeft - (x - startX) * 1.4;
   });
 })();
-// CONTACT PAGE RESUME DOWNLOAD
 
+// CONTACT PAGE RESUME DOWNLOAD
 const resumeLink = document.querySelector('.resume-link');
 
 if (resumeLink) {

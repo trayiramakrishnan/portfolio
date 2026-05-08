@@ -19,6 +19,20 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 60px;
+
+  /* NAVBAR ENTRANCE */
+  animation: navSlideDown 0.6s cubic-bezier(0.34, 1.4, 0.64, 1) both;
+}
+
+@keyframes navSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav {
@@ -47,12 +61,19 @@ body {
   text-decoration: none;
   color: #111;
   font-size: 17px;
+  display: inline-block;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px);
+  color: #ff89aa;
 }
 
 /* HERO */
 .hero {
   position: relative;
-  height: calc(100vh - 60px - 60px); /* full viewport minus nav top margin and some breathing room */
+  height: calc(100vh - 60px - 60px);
   overflow: hidden;
 
   display: flex;
@@ -68,6 +89,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 /* BIG NAME */
 /* TRAYI */
 .hero-name-trayi {
@@ -83,6 +105,8 @@ body {
   color: #ff89aa;
 
   z-index: 1;
+
+
 }
 
 /* RAMAKRISHNAN */
@@ -99,7 +123,11 @@ body {
   color: #ff89aa;
 
   z-index: 1;
+
+
 }
+
+
 
 /* CENTER IMAGE */
 .hero-image {
@@ -149,7 +177,7 @@ body {
   height: auto;
   display: block;
   margin-right: -50px;
-  margin-top: -150px; /* adjust this value until top of photo aligns with "Hi," */
+  margin-top: -150px;
 }
 
 /* STARS */
@@ -170,6 +198,8 @@ body {
   bottom: var(--star-bottom);
   left: var(--star-left);
   right: var(--star-right);
+
+  animation: starJiggle1 5s ease-in-out infinite;
 }
 
 .star-2 {
@@ -198,6 +228,20 @@ body {
   bottom: var(--star-bottom);
   left: var(--star-left);
   right: var(--star-right);
+
+  animation: starJiggle2 6s ease-in-out infinite;
+}
+
+@keyframes starJiggle1 {
+  0%, 100% { transform: rotate(0deg); }
+  25%       { transform: rotate(4deg); }
+  75%       { transform: rotate(-3deg); }
+}
+
+@keyframes starJiggle2 {
+  0%, 100% { transform: rotate(0deg); }
+  30%       { transform: rotate(-4deg); }
+  70%       { transform: rotate(3deg); }
 }
 
 /* TICKER */
@@ -206,7 +250,7 @@ body {
   overflow: hidden;
   padding: 12px 0;
   flex-shrink: 0;
-  margin-bottom: 30px; /* was 0, this lifts it up */
+  margin-bottom: 30px;
 }
 
 .ticker-track {
@@ -244,19 +288,21 @@ body {
     display: none;
   }
 }
+
 /* ABOUT SECTION */
 .about {
   background-color: #000;
-  padding-top: 80px; /* reduced since card has its own padding */
+  padding-top: 80px;
   padding-bottom: 80px;
 }
+
 .about-card {
   background: #f5f1ea;
   border-radius: 40px;
   margin: 0 5%;
   padding: 60px 40px 0 40px;
   overflow: hidden;
-  height: 870px; /* adjust this number until it cuts off right at the bottom of the photo */
+  height: 870px;
 }
 
 .about-title {
@@ -269,19 +315,19 @@ body {
   line-height: 1;
 
   position: relative;
-top: 20px;
+  top: 20px;
 }
 
 .about-body {
   display: grid;
   grid-template-columns: 1.2fr auto 1.2fr;
-  align-items: start; /* changed from center to start — pushes text to top */
+  align-items: start;
   padding: 0 5%;
   gap: 40px;
 }
 
 .about-text-img {
-  width: 180px; /* increased from 480px — adjust here */
+  width: 180px;
   height: auto;
   display: block;
 }
@@ -289,23 +335,23 @@ top: 20px;
 .about-left {
   display: flex;
   justify-content: flex-end;
-  padding-top: 20px; /* adjust this to move text up/down — lower = higher up */
+  padding-top: 20px;
 }
 
 .about-right {
   display: flex;
   justify-content: flex-start;
-  padding-top: 20px; /* adjust this to move text up/down — lower = higher up */
+  padding-top: 20px;
 }
 
 .about-left .about-text-img {
   width: 180%;
-  margin-right: -150px; /* negative = pushes toward image, positive = pushes away */
+  margin-right: -150px;
 }
 
 .about-right .about-text-img {
   width: 180%;
-  margin-left: -150px; /* negative = pushes toward image, positive = pushes away */
+  margin-left: -150px;
 }
 
 /* PINK */
@@ -333,10 +379,6 @@ top: 20px;
 
 /* EXPERIENCE */
 
-/* =========================
-   EXPERIENCE SECTION
-========================= */
-
 .experience-section {
   position: relative;
   width: 100%;
@@ -347,12 +389,8 @@ top: 20px;
   align-items: center;
   justify-content: center;
 
-  background:#000
+  background: #000;
 }
-
-/* =========================
-   INNER LAYOUT
-========================= */
 
 .exp-inner {
   width: 100%;
@@ -369,10 +407,6 @@ top: 20px;
   z-index: 2;
 }
 
-/* =========================
-   STOOL SIDE
-========================= */
-
 .stool-wrapper {
   position: relative;
 
@@ -385,36 +419,32 @@ top: 20px;
   transform: translateX(75px) translateY(100px);
 }
 
-
 .stool-wrapper img {
   width: 100%;
   display: block;
   user-select: none;
 }
 
-/* =========================
-   BOOK HOTSPOTS
-========================= */
-
+/* BOOK HOTSPOTS */
 .book-hotspot {
   position: absolute;
   cursor: pointer;
   border-radius: 4px;
   transition:
     filter 0.2s,
-    box-shadow 0.2s;
+    box-shadow 0.2s,
+    transform 0.2s ease;
 }
 
 .book-hotspot:hover {
   filter: brightness(1.15);
+  transform: scaleY(1.15) scaleX(1.04);
 }
 
 .book-hotspot.active {
   outline: 2px solid #fff;
   outline-offset: 2px;
-
-  box-shadow:
-    0 0 10px rgba(255,255,255,0.45);
+  box-shadow: 0 0 10px rgba(255,255,255,0.45);
 }
 
 .book-plum {
@@ -438,10 +468,7 @@ top: 20px;
   height: 4%;
 }
 
-/* =========================
-   RIGHT SIDE
-========================= */
-
+/* RIGHT SIDE */
 .exp-right {
   position: relative;
 
@@ -454,10 +481,7 @@ top: 20px;
   transform: translateY(-10px);
 }
 
-/* =========================
-   BIG TYPOGRAPHY
-========================= */
-
+/* BIG TYPOGRAPHY */
 .exp-heading {
   position: relative;
 
@@ -476,19 +500,16 @@ top: 20px;
   display: block;
 }
 
-/* TOP WORD */
-
 .heading-exp-top {
   font-size: 180px;
   color: #ff4d73;
 }
 
-/* BOTTOM WORD */
-
 .heading-exp-bottom {
   font-size: 180px;
   color: #ff6f91;
 }
+
 .exp-right {
   position: relative;
 
@@ -500,10 +521,8 @@ top: 20px;
 
   z-index: 5;
 }
-/* =========================
-   HINT
-========================= */
 
+/* HINT */
 .exp-hint {
   margin-top: 42px;
 
@@ -515,10 +534,7 @@ top: 20px;
   opacity: 0.85;
 }
 
-/* =========================
-   EXPERIENCE BOX
-========================= */
-
+/* EXPERIENCE BOX */
 .exp-box {
   position: absolute;
 
@@ -575,18 +591,17 @@ top: 20px;
 
   opacity: 1 !important;
 }
+
 .exp-box {
   position: absolute;
 }
+
 .exp-box-label,
 .exp-close {
   z-index: 10;
 }
 
-/* =========================
-   CLOSE BUTTON
-========================= */
-
+/* CLOSE BUTTON */
 .exp-close {
   position: absolute;
 
@@ -613,15 +628,17 @@ top: 20px;
 
   transition:
     opacity 0.3s,
-    background 0.2s;
-}
-
-.exp-box.visible .exp-close {
-  opacity: 1;
+    background 0.2s,
+    transform 0.2s ease;
 }
 
 .exp-close:hover {
   background: #333;
+  transform: rotate(90deg) scale(1.1);
+}
+
+.exp-box.visible .exp-close {
+  opacity: 1;
 }
 
 .exp-close svg {
@@ -632,10 +649,7 @@ top: 20px;
   stroke-width: 2;
 }
 
-/* =========================
-   LABEL
-========================= */
-
+/* LABEL */
 .exp-box-label {
   position: absolute;
 
@@ -656,6 +670,7 @@ top: 20px;
 .exp-box.visible .exp-box-label {
   opacity: 1;
 }
+
 .click-note {
   position: absolute;
 
@@ -671,15 +686,14 @@ top: 20px;
   user-select: none;
 }
 
-/* =========================
-   HIDE STATES
-========================= */
-
+/* HIDE STATES */
 .exp-heading.hidden,
 .exp-hint.hidden {
   opacity: 0;
   pointer-events: none;
 }
+
+/* EXP LOGOS */
 .exp-logos {
   display: flex;
   align-items: center;
@@ -698,42 +712,44 @@ top: 20px;
 
   transition:
     opacity 0.2s,
-    transform 0.2s;
+    transform 0.25s ease,
+    filter 0.2s ease;
 }
 
-/* ======================
-   PLUM
-====================== */
+.exp-logos img:hover {
+  opacity: 1;
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}
 
 .logo-plum {
   height: 140px;
   transform: translateX(-25px) translateY(-5px);
 }
 
-/* ======================
-   LIFESTYLE
-====================== */
+.logo-plum:hover {
+  transform: translateX(-25px) translateY(-10px) !important;
+}
 
 .logo-lifestyle {
   height: 50px;
-
   transform: translateX(-50px) translateY(-5px);
 }
 
-/* ======================
-   RADIO CITY
-====================== */
+.logo-lifestyle:hover {
+  transform: translateX(-50px) translateY(-10px) !important;
+}
 
 .logo-radio {
   height: 45px;
-
   transform: translateX(2px) translateY(-8px);
 }
 
-/* =========================
-   CUSTOM CURSOR
-========================= */
+.logo-radio:hover {
+  transform: translateX(2px) translateY(-13px) !important;
+}
 
+/* CUSTOM CURSOR */
 * {
   cursor:
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpolygon points='4,2 4,26 10,20 14,30 17,29 13,19 20,19' fill='%23fcbecf' stroke='%23c47a8a' stroke-width='1.5'/%3E%3C/svg%3E")
@@ -747,6 +763,7 @@ button,
 .exp-logos img {
   cursor: pointer;
 }
+
 /* MOBILE */
 @media (max-width: 768px) {
   .hero-content {
@@ -763,6 +780,7 @@ button,
     display: none;
   }
 }
+
 /* GRAIN OVERLAY */
 body::before {
   content: "";
@@ -783,6 +801,24 @@ body::before {
 
   z-index: 9999;
 }
+
+/* =========================
+   SCROLL FADE-UP
+========================= */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.scroll-reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* =========================
    WORK SECTION
 ========================= */
@@ -896,12 +932,13 @@ body::before {
   text-underline-offset: 4px;
   text-align: right;
   display: block;
-  transition: color 0.2s, letter-spacing 0.2s;
+  transition: color 0.2s, letter-spacing 0.2s, transform 0.2s ease;
 }
 
 .panel-link:hover {
   color: #ff89aa;
   letter-spacing: 0.5px;
+  transform: translateY(-2px);
 }
 
 .work-scroll-wrapper {
@@ -963,13 +1000,16 @@ body::before {
   color: #ff89aa;
   text-decoration: none;
   margin-top: 40px;
-  transition: color 0.2s, letter-spacing 0.2s;
+  transition: color 0.2s, letter-spacing 0.2s, transform 0.2s ease;
+  display: block;
 }
 
 .work-full-link:hover {
   color: #d81b4e;
   letter-spacing: 0.5px;
+  transform: translateY(-2px);
 }
+
 /* =========================
    CONTACT SECTION
 ========================= */
@@ -997,19 +1037,13 @@ body::before {
   position: relative;
 }
 
-/* =========================
-   LEFT SIDE
-========================= */
-
+/* LEFT SIDE */
 .contact-left {
   width: 32%;
   position: relative;
 }
 
-/* =========================
-   LET'S TALK
-========================= */
-
+/* LET'S TALK */
 .contact-title {
   font-family: "Hibernate Two";
   font-weight: normal;
@@ -1025,10 +1059,7 @@ body::before {
   text-align: center;
 }
 
-/* =========================
-   ICONS WRAPPER
-========================= */
-
+/* ICONS WRAPPER */
 .contact-icons {
   display: flex;
   align-items: center;
@@ -1042,10 +1073,7 @@ body::before {
   top: 0px;
 }
 
-/* =========================
-   LINKEDIN
-========================= */
-
+/* LINKEDIN */
 .linkedin-icon {
   width: 45px;
 
@@ -1053,12 +1081,16 @@ body::before {
 
   left: 120px;
   top: 70px;
+
+  transition: transform 0.25s ease, filter 0.2s ease;
 }
 
-/* =========================
-   MAIL
-========================= */
+.contact-icon-link:hover .linkedin-icon {
+  transform: translateY(-5px);
+  filter: brightness(1.15);
+}
 
+/* MAIL */
 .mail-icon {
   width: 58px;
 
@@ -1066,12 +1098,16 @@ body::before {
 
   left: 130px;
   top: 70px;
+
+  transition: transform 0.25s ease, filter 0.2s ease;
 }
 
-/* =========================
-   EMAIL TEXT
-========================= */
+.contact-icon-link:hover .mail-icon {
+  transform: translateY(-5px);
+  filter: brightness(1.15);
+}
 
+/* EMAIL TEXT */
 .contact-email {
   font-size: 25px;
   line-height: 1.4;
@@ -1087,10 +1123,7 @@ body::before {
   text-align: center;
 }
 
-/* =========================
-   RIGHT SIDE
-========================= */
-
+/* RIGHT SIDE */
 .contact-right {
   width: 60%;
 
@@ -1102,10 +1135,7 @@ body::before {
   display: block;
 }
 
-/* =========================
-   RESUME ICON
-========================= */
-
+/* RESUME ICON */
 .resume-link {
   position: absolute;
 
@@ -1117,12 +1147,17 @@ body::before {
 
   z-index: 10;
   cursor: pointer;
+
+  animation: resumePulse 2.4s ease-in-out 1.5s infinite;
 }
 
-/* =========================
-   MY RESUME DOODLE
-========================= */
+@keyframes resumePulse {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  30%       { transform: scale(1.08) rotate(-3deg); }
+  60%       { transform: scale(1.05) rotate(2deg); }
+}
 
+/* MY RESUME DOODLE */
 .resume-doodle {
   position: absolute;
 
@@ -1135,6 +1170,7 @@ body::before {
 
   pointer-events: none;
 }
+
 .contact-icon-link,
 .contact-icon {
   cursor: pointer;
