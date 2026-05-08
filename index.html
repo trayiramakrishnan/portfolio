@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trayi Portfolio</title>
+
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div class="nav-container">
+    <div class="nav">
+      <div class="logo">★</div>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#work">Work</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- STAR DOODLES -->
+  <img src="star.png" class="star star-1" />
+  <img src="star.png" class="star star-3" />
+
+ <div class="hero-content">
+
+  <!-- BIG NAME -->
+<div class="hero-name-trayi">
+  Trayi
+</div>
+
+<div class="hero-name-rama">
+  Ramakrishnan
+</div>
+
+  <!-- CENTER IMAGE -->
+  <div class="hero-image">
+    <img src="hero1.png" alt="Trayi" />
+  </div>
+
+  <!-- SMALL SIDE TEXT -->
+  <div class="hero-caption">
+  (rhymes with try,<br>
+which is what I’m doing here)
+  </div>
+
+</div>
+
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-track">
+      marketing · product · abm · growth · go-to-market · strategy · branding · analytics · positioning · content · business · segmentation · storytelling · messaging · conversion ·
+      marketing · product · abm · growth · go-to-market · strategy · branding · analytics · positioning · content · business · segmentation · storytelling · messaging · conversion ·
+      marketing · product · abm · growth · go-to-market · strategy · branding · analytics · positioning · content · business · segmentation · storytelling · messaging · conversion ·
+      marketing · product · abm · growth · go-to-market · strategy · branding · analytics · positioning · content · business · segmentation · storytelling · messaging · conversion ·
+
+    </div>
+  </div>
+
+</section>
+
+  <!-- SCROLL TARGETS -->
+</section>
+
+  <!-- SCROLL TARGETS -->
+  <!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-card">
+   <h2 class="about-title">about me</h2>
+
+    <div class="about-body">
+      <div class="about-left">
+        <img src="lefttext.png" alt="about me left text" class="about-text-img" />
+      </div>
+
+      <div class="about-image-wrap">
+        <img src="about me.png" alt="Trayi" class="about-img" />
+      </div>
+
+      <div class="about-right">
+        <img src="righttext.png" alt="about me right text" class="about-text-img" />
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section id="experience" class="experience-section">
+    <div class="exp-inner">
+
+      <div class="stool-wrapper">
+          <img class="click-note" src="click.png" alt="">
+        <img src="stool.png" alt="A wooden stool with books" draggable="false" />
+        
+
+        <div class="book-hotspot book-plum"      data-company="plum"      title="Plum Benefits"></div>
+        <div class="book-hotspot book-lifestyle"  data-company="lifestyle"  title="Lifestyle"></div>
+        <div class="book-hotspot book-radio"      data-company="radio"      title="Radio City"></div>
+      </div>
+
+      <div class="exp-right">
+
+  <div class="exp-heading" id="expHeading">
+    <span class="heading-exp-top">EXPER-</span>
+    <span class="heading-exp-bottom">IENCE</span>
+  </div>
+
+<div class="exp-logos">
+  <img src="plumlogo.png"
+       class="logo-plum"
+       data-company="plum"
+       alt="">
+
+  <img src="lifestylelogo.png"
+       class="logo-lifestyle"
+       data-company="lifestyle"
+       alt="">
+
+  <img src="radiocitylogo.png"
+       class="logo-radio"
+       data-company="radio"
+       alt="">
+</div>
+
+<div class="exp-box" id="expBox">
+
+  <span class="exp-box-label" id="expBoxLabel"></span>
+
+  <img id="expBoxImg" src="" alt="Experience content" />
+
+  <button class="exp-close" id="expClose" aria-label="Close">
+    <svg viewBox="0 0 14 14" fill="none">
+      <line x1="1" y1="1" x2="13" y2="13"/>
+      <line x1="13" y1="1" x2="1" y2="13"/>
+    </svg>
+  </button>
+
+</div>
+
+      </div>
+    </div>
+  </section>
+
+<section id="work" class="work-section">
+  <div class="work-inner">
+
+    <h2 class="work-title">my work</h2>
+
+    <p class="work-desc">
+      I spend a lot of time on Canva and Notion. This section is a self-initiated mock
+      case study across both brands. Just genuine curiosity about why these two products
+      are built the way they are, positioned the way they are, and where I think the gaps are.
+    </p>
+
+    <p class="work-built">here's what I built:</p>
+
+    <div class="work-panel" id="workPanel">
+      <div class="work-panel-inner">
+        <div class="work-panel-left">
+          <h3 class="panel-title" id="panelTitle"></h3>
+          <span class="panel-brand" id="panelBrand"></span>
+        </div>
+        <div class="work-panel-right">
+          <p class="panel-summary" id="panelSummary"></p>
+          <a class="panel-link" id="panelLink" href="#" target="_blank"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-scroll-wrapper">
+      <div class="work-cards" id="workCards">
+
+        <div class="work-card" data-index="0"
+          data-title="BRAND<br>AUDIT"
+          data-brand="Canva"
+          data-summary="Canva's brand is caught between two identities: an accessible design tool for everyone and an enterprise productivity platform. While its branding remains strong, inconsistent messaging and growing paywalls risk diluting the clarity that made it successful."
+          data-link="https://www.notion.so/Brand-Audit-3594821cf0ab8011944ef149b6afbefe?source=copy_link"
+          data-linktext="Read the full Brand Audit">
+          <img src="work1.png" alt="Brand Audit" draggable="false" />
+        </div>
+
+        <div class="work-card" data-index="1"
+          data-title="GTM<br>LAUNCH<br>PLAN"
+          data-brand="Canva"
+          data-summary="Canva's brand is caught between two identities: an accessible design tool for everyone and an enterprise productivity platform. While its branding remains strong, inconsistent messaging and growing paywalls risk diluting the clarity that made it successful."
+          data-link="https://www.notion.so/GTM-Launch-Plan-3594821cf0ab80b1b181c17aff83e40b?source=copy_link"
+          data-linktext="Read the full GTM Launch Plan">
+          <img src="work2.png" alt="GTM Launch Plan" draggable="false" />
+        </div>
+
+        <div class="work-card" data-index="2"
+          data-title="POSITIONING<br>&amp; MESSAGING"
+          data-brand="Canva"
+          data-summary="Canva's brand is caught between two identities: an accessible design tool for everyone and an enterprise productivity platform. While its branding remains strong, inconsistent messaging and growing paywalls risk diluting the clarity that made it successful."
+          data-link="https://www.notion.so/Positioning-and-Messaging-3594821cf0ab80c5b424cb1561f27ced?source=copy_link"
+          data-linktext="Read the full Positioning Doc">
+          <img src="work3.png" alt="Positioning and Messaging" draggable="false" />
+        </div>
+
+        <div class="work-card" data-index="3"
+          data-title="COMPETITOR<br>ANALYSIS &amp;<br>BATTLECARD"
+          data-brand="Notion"
+          data-summary="Canva's brand is caught between two identities: an accessible design tool for everyone and an enterprise productivity platform. While its branding remains strong, inconsistent messaging and growing paywalls risk diluting the clarity that made it successful."
+          data-link="https://www.notion.so/Competitor-Analysis-and-Battlecard-3594821cf0ab80ed8409ff9eb0d9033d?source=copy_link"
+          data-linktext="Read the full Competitor Analysis">
+          <img src="work4.png" alt="Competitor Analysis" draggable="false" />
+        </div>
+
+        <div class="work-card" data-index="4"
+          data-title="CUSTOMER<br>JOURNEY<br>MAP"
+          data-brand="Notion"
+          data-summary="Canva's brand is caught between two identities: an accessible design tool for everyone and an enterprise productivity platform. While its branding remains strong, inconsistent messaging and growing paywalls risk diluting the clarity that made it successful."
+          data-link="https://www.notion.so/Customer-Journey-Map-3594821cf0ab805c8337ec8321e6d7dc?source=copy_link"
+          data-linktext="Read the full Journey Map">
+          <img src="work5.png" alt="Customer Journey Map" draggable="false" />
+        </div>
+
+      </div>
+
+      <a class="work-full-link" href="https://www.notion.so/Trayi-s-Case-Studies-3564821cf0ab80528c2cc0e840285f84" target="_blank">or, view the entire case study</a>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+
+  <div class="contact-card">
+
+    <!-- LEFT -->
+    <div class="contact-left">
+
+      <h2 class="contact-title">
+        LET’S<br>
+        TALK
+      </h2>
+
+      <div class="contact-icons">
+
+        <a
+          href="https://www.linkedin.com/in/trayi-ramakrishnan-401023247/"
+          target="_blank"
+          class="contact-icon-link">
+
+          <img
+            src="linkedin.png"
+            alt="LinkedIn"
+            class="contact-icon linkedin-icon">
+        </a>
+
+       <a
+  href="mailto:trayiramakrishnan@gmail.com"
+  class="contact-icon-link">
+
+  <img
+    src="mail.png"
+    alt="Email"
+    class="contact-icon mail-icon">
+
+</a>
+
+      </div>
+
+      <p class="contact-email">
+        trayiramakrishnan@gmail.com
+      </p>
+
+    </div>
+
+
+    <!-- RIGHT -->
+    <div class="contact-right">
+
+      <img
+        src="contact.png"
+        alt="Desktop"
+        class="contact-desktop">
+
+
+      <!-- RESUME ICON -->
+      <a
+  href="resume.pdf"
+  target="_blank"
+  class="resume-link"
+  aria-label="Open resume">
+</a>
+
+
+      <!-- DOODLE -->
+      <img
+        src="resume-doodle.png"
+        alt=""
+        class="resume-doodle">
+
+    </div>
+
+  </div>
+
+</section>

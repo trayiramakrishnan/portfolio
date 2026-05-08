@@ -1,0 +1,1141 @@
+@font-face {
+  font-family: 'Hibernate Two';
+  src: url('HibernateTwo.otf') format('opentype');
+}
+/* RESET / BASE */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  min-height: 100vh;
+}
+
+/* NAVBAR */
+.nav-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.nav {
+  width: 75%;
+  background: #f5f1ea;
+  border-radius: 50px;
+  padding: 12px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #ff89aa;
+  font-size: 22px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 40px;
+  text-decoration: none;
+  color: #111;
+  font-size: 17px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: calc(100vh - 60px - 60px); /* full viewport minus nav top margin and some breathing room */
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 40px 0 0;
+}
+
+/* MAIN HERO LAYOUT */
+.hero-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+/* BIG NAME */
+/* TRAYI */
+.hero-name-trayi {
+  position: absolute;
+
+  top: 70px;
+  left: 220px;
+
+  font-family: "Hibernate Two", cursive;
+  font-size: 260px;
+  line-height: 1;
+
+  color: #ff89aa;
+
+  z-index: 1;
+}
+
+/* RAMAKRISHNAN */
+.hero-name-rama {
+  position: absolute;
+
+  top: 290px;
+  left: 340px;
+
+  font-family: "Hibernate Two", cursive;
+  font-size: 220px;
+  line-height: 1;
+
+  color: #ff89aa;
+
+  z-index: 1;
+}
+
+/* CENTER IMAGE */
+.hero-image {
+  position: absolute;
+  left: 50%;
+  top: 170px;
+
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.hero-image img {
+  width: 620px;
+  height: auto;
+  display: block;
+}
+
+/* SIDE CAPTION */
+.hero-caption {
+  position: absolute;
+  right: 155px;
+  top: 490px;
+
+  color: #f5f1ea;
+
+  font-size: 28px;
+  line-height: 1.4;
+  text-align: right;
+}
+
+/* BLACK BACKGROUND */
+body {
+  background-color: #000;
+}
+
+/* IMAGE */
+.hero-image {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.hero-image img {
+  width: 850px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-right: -50px;
+  margin-top: -150px; /* adjust this value until top of photo aligns with "Hi," */
+}
+
+/* STARS */
+.star {
+  position: absolute;
+  opacity: 0.9;
+}
+
+.star-1 {
+  --star-size: 800px;
+  --star-top: auto;
+  --star-bottom: -20%;
+  --star-left: -25%;
+  --star-right: auto;
+
+  width: var(--star-size);
+  top: var(--star-top);
+  bottom: var(--star-bottom);
+  left: var(--star-left);
+  right: var(--star-right);
+}
+
+.star-2 {
+  --star-size: 400px;
+  --star-top: auto;
+  --star-bottom: -5%;
+  --star-left: 1%;
+  --star-right: auto;
+
+  width: var(--star-size);
+  top: var(--star-top);
+  bottom: var(--star-bottom);
+  left: var(--star-left);
+  right: var(--star-right);
+}
+
+.star-3 {
+  --star-size: 800px;
+  --star-top: -160px;
+  --star-bottom: auto;
+  --star-left: auto;
+  --star-right: -10%;
+
+  width: var(--star-size);
+  top: var(--star-top);
+  bottom: var(--star-bottom);
+  left: var(--star-left);
+  right: var(--star-right);
+}
+
+/* TICKER */
+.ticker {
+  width: 100%;
+  overflow: hidden;
+  padding: 12px 0;
+  flex-shrink: 0;
+  margin-bottom: 30px; /* was 0, this lifts it up */
+}
+
+.ticker-track {
+  display: inline-block;
+  white-space: nowrap;
+
+  font-size: 20px;
+  color: #f2ede3;
+
+  letter-spacing: 0.5px;
+  word-spacing: 20px;
+
+  animation: scroll 70s linear infinite;
+}
+
+/* ANIMATION */
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-image img {
+    width: 320px;
+    margin-top: 40px;
+  }
+
+  .star {
+    display: none;
+  }
+}
+/* ABOUT SECTION */
+.about {
+  background-color: #000;
+  padding-top: 80px; /* reduced since card has its own padding */
+  padding-bottom: 80px;
+}
+.about-card {
+  background: #f5f1ea;
+  border-radius: 40px;
+  margin: 0 5%;
+  padding: 60px 40px 0 40px;
+  overflow: hidden;
+  height: 870px; /* adjust this number until it cuts off right at the bottom of the photo */
+}
+
+.about-title {
+  text-align: center;
+  font-family: "Hibernate Two";
+  font-size: 100px;
+  color: #ff89aa;
+  font-weight: normal;
+  margin-bottom: 60px;
+  line-height: 1;
+
+  position: relative;
+top: 20px;
+}
+
+.about-body {
+  display: grid;
+  grid-template-columns: 1.2fr auto 1.2fr;
+  align-items: start; /* changed from center to start — pushes text to top */
+  padding: 0 5%;
+  gap: 40px;
+}
+
+.about-text-img {
+  width: 180px; /* increased from 480px — adjust here */
+  height: auto;
+  display: block;
+}
+
+.about-left {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 20px; /* adjust this to move text up/down — lower = higher up */
+}
+
+.about-right {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 20px; /* adjust this to move text up/down — lower = higher up */
+}
+
+.about-left .about-text-img {
+  width: 180%;
+  margin-right: -150px; /* negative = pushes toward image, positive = pushes away */
+}
+
+.about-right .about-text-img {
+  width: 180%;
+  margin-left: -150px; /* negative = pushes toward image, positive = pushes away */
+}
+
+/* PINK */
+.pink {
+  color: #d81b4e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .about-body {
+    grid-template-columns: 1fr;
+    padding: 0 20px;
+  }
+
+  .about-left,
+  .about-right {
+    clip-path: none;
+    padding: 0;
+  }
+
+  .about-image-wrap {
+    margin: 30px 0;
+  }
+}
+
+/* EXPERIENCE */
+
+/* =========================
+   EXPERIENCE SECTION
+========================= */
+
+.experience-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background:#000
+}
+
+/* =========================
+   INNER LAYOUT
+========================= */
+
+.exp-inner {
+  width: 100%;
+  max-width: 1600px;
+
+  padding: 80px 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   STOOL SIDE
+========================= */
+
+.stool-wrapper {
+  position: relative;
+
+  width: 460px;
+  flex-shrink: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  transform: translateX(75px) translateY(100px);
+}
+
+
+.stool-wrapper img {
+  width: 100%;
+  display: block;
+  user-select: none;
+}
+
+/* =========================
+   BOOK HOTSPOTS
+========================= */
+
+.book-hotspot {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 4px;
+  transition:
+    filter 0.2s,
+    box-shadow 0.2s;
+}
+
+.book-hotspot:hover {
+  filter: brightness(1.15);
+}
+
+.book-hotspot.active {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+
+  box-shadow:
+    0 0 10px rgba(255,255,255,0.45);
+}
+
+.book-plum {
+  top: 14%;
+  left: 27.5%;
+  width: 47%;
+  height: 4%;
+}
+
+.book-lifestyle {
+  top: 19%;
+  left: 27.5%;
+  width: 47%;
+  height: 4%;
+}
+
+.book-radio {
+  top: 24%;
+  left: 27.5%;
+  width: 47%;
+  height: 4%;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.exp-right {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  transform: translateY(-10px);
+}
+
+/* =========================
+   BIG TYPOGRAPHY
+========================= */
+
+.exp-heading {
+  position: relative;
+
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+
+  line-height: 0.78;
+  letter-spacing: -5px;
+
+  z-index: 2;
+  position: relative;
+  z-index: 20;
+}
+
+.exp-heading span {
+  display: block;
+}
+
+/* TOP WORD */
+
+.heading-exp-top {
+  font-size: 180px;
+  color: #ff4d73;
+}
+
+/* BOTTOM WORD */
+
+.heading-exp-bottom {
+  font-size: 180px;
+  color: #ff6f91;
+}
+.exp-right {
+  position: relative;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  z-index: 5;
+}
+/* =========================
+   HINT
+========================= */
+
+.exp-hint {
+  margin-top: 42px;
+
+  font-size: 24px;
+  font-weight: 300;
+
+  color: #ff8cab;
+
+  opacity: 0.85;
+}
+
+/* =========================
+   EXPERIENCE BOX
+========================= */
+
+.exp-box {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 760px;
+  height: 500px;
+
+  transform:
+    translate(-50%, -50%)
+    scale(0.96);
+
+  background: #f2ede3;
+
+  border-radius: 28px;
+
+  overflow: hidden;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    opacity 0.35s cubic-bezier(.4,0,.2,1),
+    transform 0.35s cubic-bezier(.4,0,.2,1);
+
+  z-index: 10;
+}
+
+.exp-box.visible {
+  opacity: 1;
+
+  transform:
+    translate(-50%, -50%)
+    scale(1);
+
+  pointer-events: all;
+}
+
+#expBoxImg {
+  position: absolute !important;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  display: block !important;
+
+  z-index: 20 !important;
+
+  opacity: 1 !important;
+}
+.exp-box {
+  position: absolute;
+}
+.exp-box-label,
+.exp-close {
+  z-index: 10;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+.exp-close {
+  position: absolute;
+
+  top: 16px;
+  right: 16px;
+
+  width: 32px;
+  height: 32px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: rgba(17,17,17,0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  z-index: 20;
+
+  opacity: 0;
+
+  transition:
+    opacity 0.3s,
+    background 0.2s;
+}
+
+.exp-box.visible .exp-close {
+  opacity: 1;
+}
+
+.exp-close:hover {
+  background: #333;
+}
+
+.exp-close svg {
+  width: 11px;
+  height: 11px;
+
+  stroke: white;
+  stroke-width: 2;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.exp-box-label {
+  position: absolute;
+
+  top: 18px;
+  left: 22px;
+
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #111;
+
+  opacity: 0;
+
+  transition: opacity 0.3s;
+}
+
+.exp-box.visible .exp-box-label {
+  opacity: 1;
+}
+.click-note {
+  position: absolute;
+
+  width: 310px !important;
+  height: auto;
+
+  top: -50px;
+  left: -110px;
+
+  z-index: 5;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+/* =========================
+   HIDE STATES
+========================= */
+
+.exp-heading.hidden,
+.exp-hint.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+.exp-logos {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  margin-top: 22px;
+  margin-left: 10px;
+
+  z-index: 3;
+}
+
+.exp-logos img {
+  width: auto;
+
+  opacity: 0.8;
+
+  transition:
+    opacity 0.2s,
+    transform 0.2s;
+}
+
+/* ======================
+   PLUM
+====================== */
+
+.logo-plum {
+  height: 140px;
+  transform: translateX(-25px) translateY(-5px);
+}
+
+/* ======================
+   LIFESTYLE
+====================== */
+
+.logo-lifestyle {
+  height: 50px;
+
+  transform: translateX(-50px) translateY(-5px);
+}
+
+/* ======================
+   RADIO CITY
+====================== */
+
+.logo-radio {
+  height: 45px;
+
+  transform: translateX(2px) translateY(-8px);
+}
+
+/* =========================
+   CUSTOM CURSOR
+========================= */
+
+* {
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpolygon points='4,2 4,26 10,20 14,30 17,29 13,19 20,19' fill='%23fcbecf' stroke='%23c47a8a' stroke-width='1.5'/%3E%3C/svg%3E")
+    4 2,
+    auto;
+}
+
+a,
+button,
+.book-hotspot,
+.exp-logos img {
+  cursor: pointer;
+}
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-image img {
+    width: 320px;
+    margin-top: 40px;
+  }
+
+  .star {
+    display: none;
+  }
+}
+/* GRAIN OVERLAY */
+body::before {
+  content: "";
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  pointer-events: none;
+
+  background-image: url('grain.png');
+  background-repeat: repeat;
+
+  opacity: 0.08;
+
+  z-index: 9999;
+}
+/* =========================
+   WORK SECTION
+========================= */
+
+.work-section {
+  background: #000;
+  padding: 190px 0 120px;
+}
+
+.work-inner {
+  padding: 0 8%;
+}
+
+.work-title {
+  font-family: "Hibernate Two", cursive;
+  font-size: 80px;
+  color: #ff89aa;
+  font-weight: normal;
+  margin-bottom: 32px;
+  line-height: 1;
+}
+
+.work-desc {
+  color: #f2ede3;
+  font-size: 23px;
+  line-height: 1.65;
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.work-built {
+  color: #f2ede3;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.work-panel {
+  background: #f2ede3;
+  border-radius: 28px;
+  overflow: hidden;
+  margin-bottom: 0;
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    margin-bottom 0.4s ease;
+}
+
+.work-panel.open {
+  max-height: 340px;
+  opacity: 1;
+  pointer-events: all;
+  margin-bottom: 32px;
+}
+
+.work-panel-inner {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+  padding: 48px 56px;
+  align-items: start;
+}
+
+.work-panel-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 52px;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.05;
+  letter-spacing: -1px;
+}
+
+.panel-brand {
+  font-family: "Hibernate Two", cursive;
+  font-size: 36px;
+  color: #ff89aa;
+  line-height: 1;
+}
+
+.work-panel-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 32px;
+  padding-top: 6px;
+}
+
+.panel-summary {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #1a1a1a;
+  text-align: justify;
+}
+
+.panel-link {
+  font-family: "Hibernate Two", cursive;
+  font-size: 26px;
+  color: #d81b4e;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-align: right;
+  display: block;
+  transition: color 0.2s, letter-spacing 0.2s;
+}
+
+.panel-link:hover {
+  color: #ff89aa;
+  letter-spacing: 0.5px;
+}
+
+.work-scroll-wrapper {
+  width: 100%;
+  padding-bottom: 12px;
+}
+
+.work-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+.work-card {
+  width: 18%;
+  aspect-ratio: auto;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+  outline: 3px solid transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.25s ease, transform 0.25s ease;
+}
+
+.work-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+  transition: filter 0.25s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-4px);
+}
+
+.work-card:hover img {
+  filter: brightness(1.06);
+}
+
+.work-card.active {
+  outline-color: #ff89aa;
+  transform: translateY(-4px);
+}
+
+.work-card.active[data-brand="Notion"] {
+  outline-color: #c2a8f0;
+}
+
+.work-full-link {
+  display: block;
+  font-family: "Hibernate Two", cursive;
+  text-align: center;
+  font-size: 28px;
+  color: #ff89aa;
+  text-decoration: none;
+  margin-top: 40px;
+  transition: color 0.2s, letter-spacing 0.2s;
+}
+
+.work-full-link:hover {
+  color: #d81b4e;
+  letter-spacing: 0.5px;
+}
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+  background: #000;
+  padding: 140px 0;
+}
+
+.contact-card {
+  width: 84%;
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  background: #ece9e3;
+
+  padding: 70px 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+
+  position: relative;
+}
+
+/* =========================
+   LEFT SIDE
+========================= */
+
+.contact-left {
+  width: 32%;
+  position: relative;
+}
+
+/* =========================
+   LET'S TALK
+========================= */
+
+.contact-title {
+  font-family: "Hibernate Two";
+  font-weight: normal;
+  line-height: 0.8;
+
+  color: #ff89aa;
+
+  position: relative;
+  font-size: 160px;
+
+  left: 0px;
+  top: 70px;
+  text-align: center;
+}
+
+/* =========================
+   ICONS WRAPPER
+========================= */
+
+.contact-icons {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+
+  position: relative;
+
+  margin-top: 70px;
+
+  left: 0px;
+  top: 0px;
+}
+
+/* =========================
+   LINKEDIN
+========================= */
+
+.linkedin-icon {
+  width: 45px;
+
+  position: relative;
+
+  left: 120px;
+  top: 70px;
+}
+
+/* =========================
+   MAIL
+========================= */
+
+.mail-icon {
+  width: 58px;
+
+  position: relative;
+
+  left: 130px;
+  top: 70px;
+}
+
+/* =========================
+   EMAIL TEXT
+========================= */
+
+.contact-email {
+  font-size: 25px;
+  line-height: 1.4;
+
+  color: #111;
+
+  position: relative;
+
+  margin-top: 100px;
+
+  left: 0px;
+  top: 0px;
+  text-align: center;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.contact-right {
+  width: 60%;
+
+  position: relative;
+}
+
+.contact-desktop {
+  width: 100%;
+  display: block;
+}
+
+/* =========================
+   RESUME ICON
+========================= */
+
+.resume-link {
+  position: absolute;
+
+  top: 70px;
+  right: 35px;
+
+  width: 50px;
+  height: 80px;
+
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* =========================
+   MY RESUME DOODLE
+========================= */
+
+.resume-doodle {
+  position: absolute;
+
+  width: 280px;
+
+  top: -130px;
+  right: -200px;
+
+  z-index: 20;
+
+  pointer-events: none;
+}
+.contact-icon-link,
+.contact-icon {
+  cursor: pointer;
+}
