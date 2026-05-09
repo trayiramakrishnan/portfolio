@@ -1190,3 +1190,280 @@ body::before {
 .contact-icon {
   cursor: pointer;
 }
+/* =========================
+   MOBILE (max-width: 768px)
+========================= */
+@media (max-width: 768px) {
+
+  /* --- NAVBAR --- */
+  .nav-container {
+    margin-top: 20px;
+  }
+  .nav {
+    width: 92%;
+    padding: 10px 18px;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 20px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+  }
+  .nav-links a {
+    margin-left: 12px;
+    font-size: 14px;
+  }
+
+  /* --- HERO --- */
+  .hero {
+    height: auto;
+    min-height: 100svh;
+    padding: 20px 0 0;
+  }
+  .hero-content {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+  }
+  .hero-name-trayi {
+    font-size: 22vw;
+    top: 10px;
+    left: 10px;
+  }
+  .hero-name-rama {
+    font-size: 11vw;
+    top: auto;
+    bottom: 160px;
+    left: 10px;
+  }
+  .hero-image {
+    position: absolute;
+    left: 50%;
+    top: 60px;
+    transform: translateX(-50%);
+    margin: 0;
+  }
+  .hero-image img {
+    width: 80vw;
+    max-width: 320px;
+    margin: 0;
+  }
+  .hero-caption {
+    position: absolute;
+    right: 12px;
+    bottom: 20px;
+    top: auto;
+    font-size: 14px;
+    text-align: right;
+  }
+  .star {
+    display: none;
+  }
+  .ticker-track {
+    font-size: 14px;
+  }
+
+  /* --- ABOUT --- */
+  .about-card {
+    height: auto;
+    margin: 0 4%;
+    padding: 40px 20px 40px;
+    border-radius: 24px;
+  }
+  .about-title {
+    font-size: 60px;
+    top: 0;
+    margin-bottom: 32px;
+  }
+  .about-body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 0;
+  }
+  .about-left {
+    justify-content: center;
+    padding: 0;
+  }
+  .about-right {
+    justify-content: center;
+    padding: 0;
+  }
+  .about-left .about-text-img {
+    width: 100%;
+    margin-right: 0;
+  }
+  .about-right .about-text-img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .about-image-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .about-img {
+    width: 80%;
+    max-width: 280px;
+  }
+
+  /* --- EXPERIENCE --- */
+  .exp-inner {
+    flex-direction: column;
+    padding: 60px 20px 40px;
+    gap: 40px;
+    align-items: center;
+  }
+  .stool-wrapper {
+    width: 80vw;
+    max-width: 320px;
+    transform: none;
+  }
+  .click-note {
+    width: 180px !important;
+    top: -30px;
+    left: -30px;
+  }
+  .exp-right {
+    width: 100%;
+    transform: none;
+    align-items: center;
+  }
+  .heading-exp-top,
+  .heading-exp-bottom {
+    font-size: 18vw;
+    letter-spacing: -2px;
+  }
+  .exp-logos {
+    justify-content: center;
+    gap: 16px;
+    margin-left: 0;
+  }
+  .logo-plum {
+    height: 70px;
+    transform: none;
+  }
+  .logo-plum:hover {
+    transform: translateY(-5px) !important;
+  }
+  .logo-lifestyle {
+    height: 30px;
+    transform: none;
+  }
+  .logo-lifestyle:hover {
+    transform: translateY(-5px) !important;
+  }
+  .logo-radio {
+    height: 28px;
+    transform: none;
+  }
+  .logo-radio:hover {
+    transform: translateY(-5px) !important;
+  }
+  .exp-box {
+    width: 92vw;
+    height: auto;
+    min-height: 260px;
+    top: 50%;
+    left: 50%;
+  }
+
+  /* --- WORK --- */
+  .work-section {
+    padding: 80px 0 80px;
+  }
+  .work-inner {
+    padding: 0 5%;
+  }
+  .work-title {
+    font-size: 52px;
+  }
+  .work-desc {
+    font-size: 16px;
+  }
+  .work-built {
+    font-size: 18px;
+  }
+  .work-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .work-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 14px;
+    padding-bottom: 8px;
+  }
+  .work-card {
+    width: 52vw;
+    flex-shrink: 0;
+  }
+  .work-panel.open {
+    max-height: none;
+  }
+  .work-panel-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 28px 24px;
+  }
+  .panel-title {
+    font-size: 32px;
+  }
+  .panel-summary {
+    font-size: 14px;
+  }
+  .panel-link {
+    font-size: 20px;
+  }
+  .work-full-link {
+    font-size: 20px;
+  }
+
+  /* --- CONTACT --- */
+  .contact-section {
+    padding: 60px 0;
+  }
+  .contact-card {
+    width: 92%;
+    flex-direction: column;
+    padding: 40px 28px 50px;
+    gap: 40px;
+    border-radius: 24px;
+  }
+  .contact-left {
+    width: 100%;
+  }
+  .contact-title {
+    font-size: 80px;
+    top: 0;
+    text-align: center;
+  }
+  .contact-icons {
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .linkedin-icon {
+    left: 0;
+    top: 0;
+    width: 38px;
+  }
+  .mail-icon {
+    left: 0;
+    top: 0;
+    width: 48px;
+  }
+  .contact-email {
+    font-size: 16px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .contact-right {
+    width: 100%;
+  }
+  .resume-doodle {
+    width: 160px;
+    top: -70px;
+    right: -20px;
+  }
+}
