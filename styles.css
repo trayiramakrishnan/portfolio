@@ -1230,13 +1230,13 @@ body::before {
   .hero-name-trayi {
     font-size: 22vw;
     top: 10px;
-    left: 10px;
+    left: 50px;
   }
   .hero-name-rama {
     font-size: 11vw;
     top: auto;
     bottom: 160px;
-    left: 10px;
+    left: 50px;
   }
   .hero-image {
     position: absolute;
@@ -1252,7 +1252,7 @@ body::before {
   }
   .hero-caption {
     position: absolute;
-    right: 12px;
+    right: 50px;
     bottom: 20px;
     top: auto;
     font-size: 14px;
@@ -1279,7 +1279,7 @@ body::before {
   }
   .about-body {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 8px;
     padding: 0;
   }
   .about-left {
@@ -1377,6 +1377,7 @@ body::before {
   }
   .work-title {
     font-size: 52px;
+    text-align: center;
   }
   .work-desc {
     font-size: 16px;
@@ -1465,5 +1466,29 @@ body::before {
     width: 160px;
     top: -70px;
     right: -20px;
+  }
+ .logo-plum {
+  transform: translateX(-4px) translateY(0px);
+}
+.logo-lifestyle {
+  transform: translateX(-15px) translateY(0px);
+}
+.logo-radio {
+  transform: translateX(-11px) translateY(0px);
+}
+.resume-doodle {
+    display: none;
+  }
+  .resume-link {
+    position: static;
+    display: block;
+    font-family: "Hibernate Two", cursive;
+    font-size: 22px;
+    color: #d81b4e;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-top: 20px;
+    text-align: center;
+    animation: none;
   }
 }
