@@ -1190,6 +1190,9 @@ body::before {
 .contact-icon {
   cursor: pointer;
 }
+.about-mobile-text {
+  display: none;
+}
 /* =========================
    MOBILE (max-width: 768px)
 ========================= */
@@ -1511,7 +1514,4 @@ body::before {
     .resume-mobile-btn {
     display: block;
   }
-}
-.about-mobile-text {
-  display: none;
 }
