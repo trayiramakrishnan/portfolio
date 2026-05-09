@@ -1271,11 +1271,33 @@ body::before {
     margin-bottom: 60px;
   }
 
-  /* --- ABOUT --- */
- .about-body {
+/* --- ABOUT --- */
+  .about-card {
+    height: auto;
+    margin: 0 4%;
+    padding: 24px 20px 40px;
+    border-radius: 24px;
+  }
+  .about-title {
+    font-size: 60px;
+    top: 0;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .about-body {
     grid-template-columns: 1fr;
     gap: 0;
     padding: 0;
+  }
+  .about-left {
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  .about-right {
+    justify-content: center;
+    padding: 0;
+    margin: 0;
   }
   .about-left .about-text-img {
     width: 75%;
@@ -1293,11 +1315,10 @@ body::before {
     display: block;
     margin: 0 auto;
   }
-  .about-image-wrap {
+    .about-image-wrap {
     margin: 0;
     padding: 0;
   }
-
   /* --- EXPERIENCE --- */
   .exp-inner {
     flex-direction: column;
@@ -1473,5 +1494,8 @@ body::before {
     text-align: center;
     animation: none;
     width: fit-content;
+  }
+    .resume-mobile-btn {
+    display: block;
   }
 }
