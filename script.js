@@ -172,6 +172,7 @@ document.addEventListener('click', (e) => {
   }
 });
 
+
 (function () {
   const cards = document.querySelectorAll('.work-card');
   const panel = document.getElementById('workPanel');
@@ -183,16 +184,29 @@ document.addEventListener('click', (e) => {
   let activeIndex = null;
 
   cards.forEach((card, i) => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+      e.stopPropagation(); // prevents the document click from firing immediately
+
       if (activeIndex === i) {
         closePanel();
         return;
       }
+
       activeIndex = i;
       cards.forEach(c => c.classList.remove('active'));
       card.classList.add('active');
 
       panelTitle.innerHTML = card.dataset.title;
+
+      // long-title for cards at index 2 and 3
+    panel.classList.remove('long-title');
+const idx = parseInt(card.dataset.index);
+console.log('idx is:', idx);
+if (idx === 2 || idx === 3) {
+  panel.classList.add('long-title');
+  console.log('long-title added');
+}
+
       panelBrand.textContent = card.dataset.brand;
       panelSummary.textContent = card.dataset.summary;
       panelLink.textContent = card.dataset.linktext;
@@ -210,6 +224,7 @@ document.addEventListener('click', (e) => {
   function closePanel() {
     activeIndex = null;
     panel.classList.remove('open');
+    panel.classList.remove('long-title');
     cards.forEach(c => c.classList.remove('active'));
   }
 

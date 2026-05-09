@@ -879,7 +879,7 @@ body::before {
 
 .work-panel-inner {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 340px 1fr;
   gap: 60px;
   padding: 48px 56px;
   align-items: start;
@@ -914,6 +914,21 @@ body::before {
   height: 100%;
   gap: 32px;
   padding-top: 6px;
+}
+
+.work-panel.long-title .work-panel-inner {
+  grid-template-columns: 420px 1fr;
+  gap: 48px;
+}
+
+.work-panel.long-title .panel-title {
+  font-size: 22px;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+}
+
+.work-panel.long-title .work-panel-right {
+  padding-left: 0;
 }
 
 .panel-summary {
