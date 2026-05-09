@@ -1319,6 +1319,19 @@ body::before {
     margin: 0;
     padding: 0;
   }
+  .about-mobile-text {
+    display: block;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #111;
+    padding: 16px 4px 0;
+  }
+  .about-mobile-text p {
+    margin-bottom: 16px;
+  }
+  .about-body {
+    display: none;
+  }
   /* --- EXPERIENCE --- */
   .exp-inner {
     flex-direction: column;
@@ -1498,4 +1511,7 @@ body::before {
     .resume-mobile-btn {
     display: block;
   }
+}
+.about-mobile-text {
+  display: none;
 }
