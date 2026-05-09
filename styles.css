@@ -1229,14 +1229,14 @@ body::before {
   }
   .hero-name-trayi {
     font-size: 22vw;
-    top: 10px;
-    left: 50px;
+    top: 33px;
+    left: 107px;
   }
   .hero-name-rama {
     font-size: 11vw;
     top: auto;
-    bottom: 160px;
-    left: 50px;
+    bottom: 122px;
+    left: 88px;
   }
   .hero-image {
     position: absolute;
@@ -1250,13 +1250,16 @@ body::before {
     max-width: 320px;
     margin: 0;
   }
-  .hero-caption {
+    .hero-caption {
     position: absolute;
-    right: 50px;
-    bottom: 20px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 39px;
     top: auto;
     font-size: 14px;
-    text-align: right;
+    text-align: center;
+    white-space: nowrap;
   }
   .star {
     display: none;
@@ -1264,47 +1267,35 @@ body::before {
   .ticker-track {
     font-size: 14px;
   }
+  .ticker {
+    margin-bottom: 60px;
+  }
 
   /* --- ABOUT --- */
-  .about-card {
-    height: auto;
-    margin: 0 4%;
-    padding: 40px 20px 40px;
-    border-radius: 24px;
-  }
-  .about-title {
-    font-size: 60px;
-    top: 0;
-    margin-bottom: 32px;
-  }
-  .about-body {
+ .about-body {
     grid-template-columns: 1fr;
-    gap: 8px;
-    padding: 0;
-  }
-  .about-left {
-    justify-content: center;
-    padding: 0;
-  }
-  .about-right {
-    justify-content: center;
+    gap: 0;
     padding: 0;
   }
   .about-left .about-text-img {
-    width: 100%;
-    margin-right: 0;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
   }
   .about-right .about-text-img {
-    width: 100%;
-    margin-left: 0;
-  }
-  .about-image-wrap {
-    display: flex;
-    justify-content: center;
+    width: 75%;
+    margin: 0 auto;
+    display: block;
   }
   .about-img {
-    width: 80%;
-    max-width: 280px;
+    width: 75%;
+    max-width: 260px;
+    display: block;
+    margin: 0 auto;
+  }
+  .about-image-wrap {
+    margin: 0;
+    padding: 0;
   }
 
   /* --- EXPERIENCE --- */
@@ -1337,25 +1328,25 @@ body::before {
   .exp-logos {
     justify-content: center;
     gap: 16px;
-    margin-left: 0;
+    margin-left: -40px;
   }
   .logo-plum {
     height: 70px;
-    transform: none;
+    transform: translateX(-6px) translateY(0px);
   }
   .logo-plum:hover {
     transform: translateY(-5px) !important;
   }
   .logo-lifestyle {
     height: 30px;
-    transform: none;
+    transform: translateX(-18px) translateY(0px);
   }
   .logo-lifestyle:hover {
     transform: translateY(-5px) !important;
   }
   .logo-radio {
     height: 28px;
-    transform: none;
+    transform: translateX(-11px) translateY(0px);
   }
   .logo-radio:hover {
     transform: translateY(-5px) !important;
@@ -1467,19 +1458,10 @@ body::before {
     top: -70px;
     right: -20px;
   }
- .logo-plum {
-  transform: translateX(-4px) translateY(0px);
-}
-.logo-lifestyle {
-  transform: translateX(-15px) translateY(0px);
-}
-.logo-radio {
-  transform: translateX(-11px) translateY(0px);
-}
 .resume-doodle {
     display: none;
   }
-  .resume-link {
+.resume-link {
     position: static;
     display: block;
     font-family: "Hibernate Two", cursive;
@@ -1487,8 +1469,9 @@ body::before {
     color: #d81b4e;
     text-decoration: underline;
     text-underline-offset: 4px;
-    margin-top: 20px;
+    margin: 20px auto 0;
     text-align: center;
     animation: none;
+    width: fit-content;
   }
 }
