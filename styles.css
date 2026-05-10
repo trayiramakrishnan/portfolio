@@ -1140,12 +1140,34 @@ and (max-height: 840px) {
     font-size: 14px;
   }
   .ticker {
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
   .landing-image-wrap { display: none; }
-  .hero-name-trayi { display: block; }
-  .hero-name-rama { display: block; }
   .hero-image { display: block; }
+    .hero-name-trayi {
+    display: block;
+    font-family: "Hibernate Two", cursive;
+    color: #ff89aa;
+    font-size: 22vw;
+    top: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    position: absolute;
+  }
+  .hero-name-rama {
+    display: block;
+    font-family: "Hibernate Two", cursive;
+    color: #ff89aa;
+    font-size: 11vw;
+    bottom: 122px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    position: absolute;
+    white-space: nowrap;
+  }
 
   /* --- ABOUT --- */
   .about-card {
