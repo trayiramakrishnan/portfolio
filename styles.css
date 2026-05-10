@@ -856,37 +856,32 @@ body::before {
    TABLET  (769px – 1100px)
    Catches the "brother's laptop" range
 ================================ */
-@media (min-width: 769px) and (max-width: 1390px) {
-
-  .hero-name-trayi {
-    font-size: clamp(120px, 13vw, 260px);
-    left: clamp(40px, 6vw, 220px);
-    top: clamp(20px, 3vw, 70px);
-  }
-
-  .hero-name-rama {
-   font-size: clamp(60px, 11vw, 220px);
-    left: clamp(50px, 9vw, 340px);
-    top: clamp(120px, 14vw, 290px);
-  }
-}
-
 .hero-image img {
   width: clamp(275px, 62vw, 950px);
   margin-top: 30px;
 }
 
+@media (min-width: 769px) and (max-width: 1390px) {
+  .hero-name-trayi {
+    font-size: clamp(120px, 13vw, 260px);
+    left: clamp(40px, 6vw, 220px);
+    top: clamp(20px, 3vw, 70px);
+  }
+  .hero-name-rama {
+    font-size: clamp(60px, 10vw, 220px);
+    left: clamp(50px, 9vw, 340px);
+    top: clamp(120px, 14vw, 290px);
+  }
   .hero-caption {
     font-size: clamp(13px, 1.6vw, 22px);
     right: clamp(30px, 6vw, 100px);
   }
-
-  /* About: keep card height auto so nothing clips */
-  .about-card { height: auto; padding-bottom: 60px; }
-
-  /* Experience: shrink heading + logos */
-  .exp-inner { padding: 60px 40px; gap: 40px; }
-  .stool-wrapper { width: 340px; transform: translateX(40px) translateY(60px); }
+.about-card { height: 620px; padding-bottom: 0; }
+  .about-left .about-text-img { width: clamp(210px, 22vw, 380px); margin-right: -20px; }
+  .about-right .about-text-img { width: clamp(210px, 22vw, 380px); margin-left: -20px; }
+  .about-img { width: 340px; }
+  .stool-wrapper { width: 280px; transform: translateX(80px) translateY(60px); }
+  .exp-inner { padding: 60px 80px 60px 200px; gap: 60px; }
   .heading-exp-top,
   .heading-exp-bottom { font-size: 120px; }
   .logo-plum      { height: 100px; }
@@ -913,27 +908,27 @@ body::before {
   .nav-links a { margin-left: 12px; font-size: 14px; }
 
   /* HERO */
-  .hero {
-    height: auto;
-    min-height: 100svh;
-    padding: 20px 0 0;
-  }
-  .hero-content {
-    position: relative;
-    width: 100%;
-    min-height: 520px;
-  }
+.hero {
+  height: auto;
+  min-height: 100svh;
+  padding: 20px 0 0;
+}
+ .hero-content {
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+}
   .hero-name-trayi {
     font-size: 22vw;
     top: 33px;
     left: 107px;
   }
   .hero-name-rama {
-    font-size: 11vw;
-    top: auto;
-    bottom: 122px;
-    left: 88px;
-  }
+  font-size: 11vw;
+  top: auto;
+  bottom: 122px;
+  left: 88px;
+}
   .hero-image {
     position: absolute;
     left: 50%;
