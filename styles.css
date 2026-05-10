@@ -200,6 +200,9 @@ select {
 
   object-fit: contain;
 }
+.hero-name-trayi { display: none; }
+.hero-name-rama { display: none; }
+.hero-image { display: none; }
 /* =========================================
    HERO CAPTION
 ========================================= */
@@ -1139,6 +1142,10 @@ and (max-height: 840px) {
   .ticker {
     margin-bottom: 60px;
   }
+  .landing-image-wrap { display: none; }
+  .hero-name-trayi { display: block; }
+  .hero-name-rama { display: block; }
+  .hero-image { display: block; }
 
   /* --- ABOUT --- */
   .about-card {
