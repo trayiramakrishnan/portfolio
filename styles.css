@@ -1195,6 +1195,8 @@ and (max-height: 840px) {
   .about-mobile-text p {
     margin-bottom: 16px;
   }
+  .about-image-wrap { display: none; }
+  .about-mobile-image { display: block; }
 
   /* --- EXPERIENCE --- */
   .exp-inner {
@@ -1371,3 +1373,4 @@ and (max-height: 840px) {
     width: fit-content;
   }
 }
+.about-mobile-image { display: none; }
